@@ -1,0 +1,174 @@
+.todo {
+  transition: all 0.35s;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 4rem;
+    letter-spacing: 1.5rem;
+    font-weight: $font-weight-bd;
+    text-transform: uppercase;
+  }
+
+  &__new > &__group {
+    border-radius: 0.5rem;
+    border-bottom: none;
+  }
+
+  &__theme {
+    width: 1.7rem;
+  }
+
+  &__group {
+    background: $color-secondary-light;
+    border-radius: 0.5rem;
+    position: relative;
+    height: 6.5rem;
+    transition: all 0.35s;
+    border-bottom: 1px solid $color-blue-light-3;
+  }
+  &__tasks &__group {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    &:not(:first-child) {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+  &__radio {
+    @include posAbsolute50Y(left);
+    border-radius: 50%;
+    border: 1px solid $color-blue-border;
+    transition: all 0.4s;
+    &:not(+ input) {
+      z-index: 2;
+    }
+  }
+  &__item--add {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-left: 7rem;
+    background: none;
+    color: $color-blue-light;
+    border: none;
+    font-family: inherit;
+    outline: none;
+    margin-top: 0.1rem;
+    font-size: 1.8rem;
+    &::placeholder {
+      color: $color-blue-light-2;
+    }
+  }
+  &__tasks {
+    box-shadow: 0 1rem 7rem rgba($color-black, 0.3);
+  }
+
+  &__task {
+    color: $color-gray-light-4;
+    font-size: 1.8rem;
+    margin-top: -0.2rem;
+    padding: 2rem 2rem 2rem 7rem;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    .todo__complete {
+      color: $color-secondary;
+      position: absolute;
+      background: $color-white;
+      height: 1px;
+      top: 50%;
+      left: 7rem;
+      width: 0;
+      opacity: 0;
+      transition: opacity 0.2s ease, background 1s ease, width 0.5s ease;
+    }
+  }
+  &__done {
+    opacity: 1 !important;
+    background: $color-gray-light-2 !important;
+    width: calc(100% - 9rem) !important;
+  }
+  &__close {
+    background: none;
+    border: none;
+    @include posAbsolute50Y(right);
+    transition: all 0.2s;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    font-size: 1.4rem;
+    padding: 1.5rem 3rem;
+    color: $color-blue-light-2;
+    border-bottom: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    @media screen and (max-width: 37.5rem) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+  &__options {
+    display: flex;
+  }
+  &__option {
+    cursor: pointer;
+    transition: all 0.4s ease;
+    &:hover {
+      color: $color-gray-light-3;
+    }
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+    &--active {
+      color: $color-primary;
+    }
+  }
+  &__clear {
+    cursor: pointer;
+    transition: all 0.4s ease;
+    &:hover {
+      color: $color-gray-light-3;
+    }
+  }
+  &__checkbox {
+    @include posAbsolute50Y(left);
+    opacity: 0;
+  }
+  &__custom-checkbox {
+    @include posAbsolute50Y(left);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+      120deg,
+      $color-primary-light,
+      $color-tertiary
+    );
+    border-radius: 50%;
+  }
+  &__checkbox:checked + &__custom-checkbox {
+    opacity: 1;
+  }
+
+  &__label {
+    transition: all 0.4s;
+  }
+  &__group:hover &__close {
+    opacity: 1;
+  }
+  .hidden--checkbox {
+    opacity: 0;
+  }
+}

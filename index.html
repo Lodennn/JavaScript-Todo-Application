@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style></style>
+    <script defer src="js/index.js"></script>
+    <title>Todo Application</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <!-- todo -->
+      <main class="main">
+        <div class="todo">
+          <div class="todo__header mb-sm">
+            <div class="todo__title">Todo</div>
+            <img src="images/icon-moon.svg" alt="Theme 1" class="todo__theme" />
+          </div>
+          <form class="todo__new mb-xs">
+            <div class="todo__group">
+              <span class="todo__radio"></span>
+              <input
+                type="text"
+                class="todo__item todo__item--add"
+                placeholder="Create a new todo..."
+              />
+            </div>
+          </form>
+          <form class="todo__form-tasks">
+            <ul class="list-unstyled todo__tasks">
+              <!-- <li class="todo__group" data-id="123">
+                <input
+                  type="checkbox"
+                  class="todo__checkbox todo__checkbox--1"
+                  name="item1"
+                  value="item1"
+                  id="todo__item--1"
+                />
+                <span class="todo__custom-checkbox hidden--checkbox"
+                  ><img src="images/icon-check.svg" alt=""
+                /></span>
+                <label for="todo__item--1" class="todo__label todo__label--1">
+                  <span class="todo__radio"></span>
+                  <div class="todo__task">
+                    Ready for 1 hour...
+                    <span class="todo__complete" data-task="1"></span>
+                  </div>
+                </label>
+                <a href='#' class="todo__close">
+                  <img src="images/icon-cross.svg" alt="" />
+                </a>
+              </li> -->
+            </ul>
+            <div class="todo__group todo__controls">
+              <div class="todo__items-count">
+                <span class="todo__items-count--counter">3</span> items left
+              </div>
+              <ul class="list-unstyled todo__options">
+                <li class="todo__option todo__option--active" data-type="all">
+                  All
+                </li>
+                <li class="todo__option" data-type="active">Active</li>
+                <li class="todo__option" data-type="completed">Completed</li>
+              </ul>
+              <div class="todo__clear">Clear completed</div>
+            </div>
+          </form>
+        </div>
+      </main>
+      <!-- todo -->
+    </header>
+    <!-- header -->
+  </body>
+</html>

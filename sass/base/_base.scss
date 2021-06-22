@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-weight: $font-weight-rg;
+  line-height: 1.5;
+  color: $color-gray-light;
+  background-color: $color-secondary;
+  font-size: $default-font-size;
+  font-family: $font-primary;
+}
+
+main {
+  max-width: 55rem;
+  margin: auto;
+}

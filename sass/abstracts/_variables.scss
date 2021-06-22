@@ -1,0 +1,32 @@
+//Colors
+
+$color-primary: hsl(220, 98%, 61%);
+$color-primary-light: hsl(192, 100%, 67%);
+$color-tertiary: hsl(280, 87%, 65%);
+
+// Light Theme
+$color-black: #000;
+$color-white: #fff;
+$color-gray-light: hsl(0, 0%, 98%);
+$color-gray-light-2: hsl(236, 33%, 92%);
+$color-gray-light-3: hsl(233, 11%, 84%);
+$color-gray-light-4: hsl(234, 39%, 85%);
+$color-blue-light: hsl(236, 9%, 61%);
+$color-blue-light-2: hsl(233, 14%, 35%);
+$color-blue-light-3: hsl(235, 19%, 35%);
+
+$color-blue-border: rgba($color-blue-light-3, 0.5);
+
+// Dark Theme
+
+$color-secondary: hsl(235, 21%, 11%);
+$color-secondary-light: hsl(235, 24%, 19%);
+
+//Typography
+
+// Font
+$default-font-size: 1.8rem;
+
+$font-primary: "Josefin Sans", sans-serif;
+$font-weight-rg: 400;
+$font-weight-bd: 700;
